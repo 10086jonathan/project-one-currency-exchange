@@ -1,0 +1,36 @@
+:root {
+    --primary-brand-color: burlywood;
+}
+
+* {
+    box-sizing: border border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Helvetica;
+}
+
+main {
+    flex-grow: 1;
+}
+
+header, footer {
+    display: flex;
+    align-items: center;
+    color: blue;
+    height: 65px;
+    width: 100%;
+    background-color: var(--primary-brand-color);
+}
+
+header {
+    padding-left: 15px;
+}
+
+footer {
+    justify-content: center;
+}
