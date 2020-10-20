@@ -21,11 +21,15 @@ main {
     align-items: center;
     justify-content: center;
     flex-grow: 1;
+    background-image: url('../imgs/currency-conversion.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-main > section {
+section {
     display: flex;
     flex-wrap: wrap;
+    background: white;
     justify-content: center;
     height: 500px;
     width: 600px;
@@ -42,7 +46,7 @@ input, select {
 }
 
 #to {
-    padding-left: 100px;
+    padding-left: 25px;
 }
 
 #historical {
