@@ -6,7 +6,8 @@ const API_KEY = '14c529a79f00dcfec77a5bd042c0a5d1';
 let listData, currencyData;
 
 // cached element references
-const $list = $('#list');
+const $listFrom = $('#list-from');
+const $listTo = $('#list-to')
 const $currencyFrom = $('.from');
 const $currencyTo = $('.to');
 
@@ -21,6 +22,7 @@ function init() {
 };
 
 function getListData() {
+  // function to get currency list data and store it in a variable
   $.ajax(`${BASE_URL}symbols?access_key=${API_KEY}`)
     .then(function (data) {
       listData = data;
@@ -31,24 +33,32 @@ function getListData() {
 };
 
 function handleSelect() {
-  alert('selection has been made');
+  // function to get currency rate and store it in a variable
+  $.ajax(`${BASE_URL}latest?access_key=${API_KEY}`)
+    .then(function (data) {
+      currencyData = data;
+
+    }, function (error) {
+      console.log('error: ', error);
+    });
 };
-
 function generateList() {
-
+  // function to create currency list for select element
+  
   for (const [key, value] of Object.entries(listData.symbols)) {
-
-    return `
-          <option value="${key}">${value}</option>
-          `
-
+    $listFrom.append( `
+    <option value="${key}">${value}</option>
+    `)
+    $listTo.append( `
+    <option value="${key}">${value}</option>
+    `)
   };
-
 };
 
 
 function render() {
-  $list.html(generateList())
+  $listFrom.html(generateList());
+  $listTo.html(generateList());
   // console.log('data', listData);
   // console.log('generateList', generateList());
 };
