@@ -15,25 +15,38 @@
 </head>
 
 <body>
-<header>
-    <h1>Currency Exchange</h1>
-</header>
-<main>
-   <section>
-       <div>
-           <select name="currency from" id="currfrom"></select>
-       </div>
-       <div>
-           <select name="currency to" id="currto"></select>
-       </div>
-       <div>
-           
-       </div>
-   </section>
-</main>
-<footer>
-    <p>Copyright &copy; 2020 Currency Exchange All Rights Reserved</p>
-</footer>
+    <header>
+        <h1>Currency Exchange</h1>
+    </header>
+    <main>
+        <section>
+            <div id="currencyfrom">
+                <h3>Currency from:</h3>
+                <form>
+                    <select id="list" class="from">
+                        
+                    </select>
+                    <input type="text" name="Enter Amount" id="currency amount">
+                </form>
+            </div>
+
+            <div id="currencyto">
+                <h3>Currency to:</h3>
+                <form>
+                    <select id="list" class="to">
+                        
+                    </select>
+                    <div id="result">
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <p>Copyright &copy; 2020 Currency Exchange All Rights Reserved</p>
+    </footer>
 </body>
 
 </html>
