@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap" rel="stylesheet">
     <!-- local css -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- jquery -->
@@ -20,25 +22,29 @@
     </header>
     <main>
         <section>
-            <div id="currencyfrom">
+            <div id="from">
                 <h3>Currency from:</h3>
                 <form>
-                    <select id="list" class="from">
+                    <select id="list-from" class="from">
                         
-                    </select>
-                    <input type="text" name="Enter Amount" id="currency amount">
+                    </select><br>
+                    <input type="text" value="1.00" id="currency amount">
                 </form>
             </div>
 
-            <div id="currencyto">
+            <div id="to">
                 <h3>Currency to:</h3>
                 <form>
-                    <select id="list" class="to">
+                    <select id="list-to" class="to">
                         
                     </select>
                     <div id="result">
                     </div>
                 </form>
+            </div>
+        <br/>
+            <div id="historical">
+
             </div>
 
         </section>
