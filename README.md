@@ -4,8 +4,8 @@ This web app is a user-friendly way to convert currency.
 
 ## Screenshot
 
-![screenshot]
-(https://imgur.com/a/wSPdTqv)
+
+![screenshot](https://imgur.com/a/wSPdTqv)
 
 ## Inspiration
 
@@ -25,3 +25,4 @@ You can specify what amount you want to convert into the desired currency.
 
 ## Future Goals
 
+Add historical rate
