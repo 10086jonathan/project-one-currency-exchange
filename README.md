@@ -8,7 +8,8 @@ https://competent-hopper-f87686.netlify.app
 
 ## Screenshot
 
-![screenshot](https://imgur.com/a/wSPdTqv)
+![screeshot]
+(https://imgur.com/3MIDt56)
 
 ## Inspiration
 
@@ -22,10 +23,14 @@ Foreign Exchange Currency Scalping
 - jQuery
 - AJAX
 
+## API Documentation
+
+https://fixer.io/documentation
+
 ## Features
 
 You can specify what amount you want to convert into the desired currency.
 
 ## Future Goals
 
-Add historical rate
+Add historical rate and graph
