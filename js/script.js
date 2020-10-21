@@ -1,5 +1,5 @@
 // constants
-const BASE_URL = 'http://data.fixer.io/api/';
+const BASE_URL = 'http://localhost:3000/api';
 const API_KEY = CONFIG.fixerAPIKey;
 
 // variable
@@ -24,7 +24,7 @@ function init() {
 
 function getListData() {
   // function to get currency list data and store it in a variable
-  $.ajax(`${BASE_URL}symbols?access_key=${API_KEY}`)
+  $.ajax(BASE_URL + '/symbols?')
     .then(function (data) {
       listData = data;
       render();
@@ -35,7 +35,7 @@ function getListData() {
 
 function getSymbols() {
   // function to get currency rate and store it in a variable
-  $.ajax(`${BASE_URL}latest?access_key=${API_KEY}`)
+  $.ajax(BASE_URL + '/latest?')
     .then(function (data) {
       currencyData = data.rates
     }, function (error) {
