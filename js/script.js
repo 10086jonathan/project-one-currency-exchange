@@ -1,6 +1,6 @@
 // constants
-const BASE_URL = 'https://proj-proxify.herokuapp.com/api';
-const API_KEY = CONFIG.fixerAPIKey;
+const BASE_URL = 'https://proj-proxify.herokuapp.com';
+// const API_KEY = CONFIG.fixerAPIKey;
 
 // variable
 let listData, currencyData, currencyConversion;
@@ -68,6 +68,8 @@ function render() {
   $listFrom.html(generateList());
   $listTo.html(generateList());
   
-  document.getElementById('result').innerHTML = currencyConversion;
+  if(currencyConversion) {
+    document.getElementById('result').innerHTML = currencyConversion;
+  }
 
 };
