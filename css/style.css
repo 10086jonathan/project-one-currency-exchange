@@ -28,13 +28,23 @@ main {
 
 section {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     background: white;
-    justify-content: center;
     height: 500px;
     width: 600px;
     border: 1px solid white;
     box-shadow: 5px 10px 18px darkgray;
+}
+
+section > div {
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    width: 100%
+}
+
+section div:last-child {
+    align-self: center;
 }
 
 input, select {
