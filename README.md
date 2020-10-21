@@ -2,6 +2,11 @@
 
 This web app is a user-friendly way to convert currency.
 
+## Screenshot
+
+![screenshot]
+(https://imgur.com/a/wSPdTqv)
+
 ## Inspiration
 
 Foreign Exchange Currency Scalping
