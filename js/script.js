@@ -61,7 +61,8 @@ function handleSelect() {
   const toRate = currencyData[$currencyTo.val()];
   const rateConversion = toRate / fromRate;
 
-  currencyConversion = rateConversion * $userInput;
+  currencyConversion = rateConversion * parseInt($userInput.val());
+  render();
 };
 
 function render() {
