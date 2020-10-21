@@ -48,23 +48,24 @@ section div:last-child {
 }
 
 input, select {
-    margin: 15px 0 0 0;
+    margin-top: 20px;
 }
 
-#from, #to {
-    padding-top: 75px;
+#from {
+    margin-top: 50px;
 }
 
 #to {
-    padding-left: 25px;
+    margin-top: 9px;
+    padding-left: 15px;
 }
 
 #historical {
     display: flex;
-    bottom: 25;
+    margin-top: 125px;
     border: 2px solid black;
-    height: 50px;
-    width: 50px;
+    height: 200px;
+    width: 250px;
 }
 
 header, footer {
