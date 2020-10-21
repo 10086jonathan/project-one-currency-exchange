@@ -3,13 +3,14 @@ const BASE_URL = 'https://proj-proxify.herokuapp.com/api';
 const API_KEY = CONFIG.fixerAPIKey;
 
 // variable
-let listData, currencyData;
+let listData, currencyData, currencyConversion;
 
 // cached element references
 const $listFrom = $('#list-from');
 const $listTo = $('#list-to')
 const $currencyFrom = $('.from');
 const $currencyTo = $('.to');
+const $userInput = $('#user-input');
 
 // event listeners
 $currencyTo.change(handleSelect);
@@ -56,40 +57,17 @@ function generateList() {
 };
 
 function handleSelect() {
-  const fromRate = currencyData[$currencyFrom.val()]
-  const toRate = currencyData[$currencyTo.val()]
-  console.log(fromRate, toRate);
+  const fromRate = currencyData[$currencyFrom.val()];
+  const toRate = currencyData[$currencyTo.val()];
+  const rateConversion = toRate / fromRate;
 
-  // make the calculation
-  // take final calculation value and display to the DOM
-  // ....
-}
-
+  currencyConversion = rateConversion * $userInput;
+};
 
 function render() {
   $listFrom.html(generateList());
   $listTo.html(generateList());
-  // console.log('data', listData);
-  // console.log('generateList', generateList());
+  
+  document.getElementById('result').innerHTML = currencyConversion;
+
 };
-
-
-
-// function getDropDownList() {
-//     $.ajax(BASE_URL)
-//       .then(function(data){
-//         console.log(data);
-//       })
-
-// };
-
-// function generateList() {
-// return 
-// }
-
-
-// jQuery.each(currencyList, function(i, val) {
-// $('#currencyfromlist' + i).append($currencyFromList.val(val));
-// console.log(value, key)
-// $currencyFromList.val(currencyFrom)
-// });
