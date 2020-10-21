@@ -1,5 +1,5 @@
 // constants
-const BASE_URL = 'http://localhost:3000/api';
+const BASE_URL = 'https://proj-proxify.herokuapp.com/api';
 const API_KEY = CONFIG.fixerAPIKey;
 
 // variable
