@@ -1,6 +1,6 @@
 // constants
 const BASE_URL = 'http://data.fixer.io/api/';
-const API_KEY = '14c529a79f00dcfec77a5bd042c0a5d1';
+const API_KEY = CONFIG.fixerAPIKey;
 
 // variable
 let listData, currencyData;
@@ -12,13 +12,14 @@ const $currencyFrom = $('.from');
 const $currencyTo = $('.to');
 
 // event listeners
-$currencyFrom.change(handleSelect);
+$currencyTo.change(handleSelect);
 
 // functions
 init();
 
 function init() {
   getListData();
+  getSymbols();
 };
 
 function getListData() {
@@ -32,12 +33,11 @@ function getListData() {
     });
 };
 
-function handleSelect() {
+function getSymbols() {
   // function to get currency rate and store it in a variable
   $.ajax(`${BASE_URL}latest?access_key=${API_KEY}`)
     .then(function (data) {
-      currencyData = data;
-
+      currencyData = data.rates
     }, function (error) {
       console.log('error: ', error);
     });
@@ -54,6 +54,16 @@ function generateList() {
     `)
   };
 };
+
+function handleSelect() {
+  const fromRate = currencyData[$currencyFrom.val()]
+  const toRate = currencyData[$currencyTo.val()]
+  console.log(fromRate, toRate);
+
+  // make the calculation
+  // take final calculation value and display to the DOM
+  // ....
+}
 
 
 function render() {
