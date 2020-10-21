@@ -34,3 +34,9 @@ You can specify what amount you want to convert into the desired currency.
 ## Future Goals
 
 Add historical rate and graph
+
+
+## Wireframe
+
+![wireframe]
+(https://wireframe.cc/lId2lN)
