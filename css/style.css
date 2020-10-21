@@ -61,10 +61,14 @@ input, select {
 }
 
 #result {
-    margin-top: 18px;
     text-align: right;
-    background-color: whitesmoke;
+}
+
+.result {
+    margin-top: 20px;
+    height: 18px;
     border: 1px double darkgray;
+    background-color: whitesmoke;
 }
 
 #historical {
